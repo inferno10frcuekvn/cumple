@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Galería de Cumpleaños</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background: linear-gradient(to right, #ffecd2, #fcb69f);
@@ -36,11 +37,11 @@
     .slides {
       display: flex;
       transition: transform 1s ease;
-      width: calc(500px * 5);
+      width: 100%;
     }
     .slides img,
     .slides video {
-      width: 500px;
+      width: 100%;
       height: auto;
       max-height: 300px;
       flex-shrink: 0;
@@ -81,10 +82,6 @@
       .slides img,
       .slides video {
         max-height: 200px;
-        width: 100%;
-      }
-      .slides {
-        width: calc(100% * 5);
       }
     }
     #playButton {
@@ -127,7 +124,7 @@
     const total = items.length;
 
     function showSlide(i) {
-      slides.style.transform = `translateX(-${i * 500}px)`;
+      slides.style.transform = `translateX(-${i * 100}%)`;
       for (let j = 0; j < total; j++) {
         const el = items[j];
         if (el.tagName === 'VIDEO') {
