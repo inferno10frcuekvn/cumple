@@ -36,7 +36,7 @@
     .slides {
       display: flex;
       transition: transform 1s ease;
-      width: calc(500px * 5); /* 4 imágenes + 1 video */
+      width: calc(500px * 5);
     }
     .slides img,
     .slides video {
@@ -87,13 +87,24 @@
         width: calc(100% * 5);
       }
     }
+    #playButton {
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>🎉 ¡Feliz Cumpleaños! 🎉</h1>
   <p>Hoy no solo celebro tu cumpleaños, Taty. Celebro que estés en mi vida, que podamos volver a mirarnos con calma, con cariño. No tenía nada planeado para este día, la verdad. No sabía si nos íbamos a volver a hablar. Pero aquí estoy, y me alegra estar. Me alegra que ayer hayamos vuelto a hablar, que hoy pueda decirte feliz cumpleaños con algo más que palabras. Me encanta descubrirte, poco a poco, sin prisa. Y aunque no todo ha sido fácil, tú sigues siendo especial para mí. Este pequeño detalle no es perfecto, pero lo hice pensando en ti, con ganas de que sonrías. Que tengas un cumpleaños lleno de momentos que te hagan sentir viva, querida, y en paz. Y si me dejas, me encantaría ser parte de eso. Feliz cumpleaños 💖</p>
 
-  <audio autoplay loop>
+  <button id="playButton" onclick="document.getElementById('musica').play(); this.style.display='none';">🎶 Escuchar música</button>
+  <audio id="musica" loop>
     <source src="inolvidable.mp3" type="audio/mpeg">
   </audio>
 
@@ -156,3 +167,4 @@
   </script>
 </body>
 </html>
+
